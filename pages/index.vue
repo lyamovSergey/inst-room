@@ -3,7 +3,10 @@
 
 </script>
 <template>
-  <nuxt-link to="/test">go to test</nuxt-link>
+  <div class=" container">
+
+    <p>index</p>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
