@@ -1,6 +1,8 @@
 <script setup>
 import { Bars3BottomLeftIcon, MagnifyingGlassIcon } from '@heroicons/vue/16/solid'
 import { NAV_ITEMS } from '~/constatnts';
+import { filterObject } from '@/functions'
+let nav_items = filterObject(NAV_ITEMS, ['О компании', 'Акции', 'Хиты сезона', 'Новинки'])
 </script>
 <template>
   <div class=" bg-black">
@@ -12,7 +14,7 @@ import { NAV_ITEMS } from '~/constatnts';
       </button>
       <nav>
         <ul class="flex gap-14">
-          <li v-for="(link, name) in NAV_ITEMS" :key="name">
+          <li v-for="(link, name) in nav_items" :key="name">
             <nuxt-link class=" text-white font-medium" :to="link">
               {{ name }}
             </nuxt-link>
